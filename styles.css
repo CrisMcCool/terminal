@@ -1,0 +1,42 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+}
+
+.terminal {
+  border: 1px solid #555;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #333;
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.input-line {
+  display: flex;
+  align-items: center;
+}
+
+.prompt {
+  color: #6effe6;
+  margin-right: 5px;
+}
+
+.input {
+  flex: 1;
+  outline: none;
+  min-height: 20px;
+  overflow: auto;
+  white-space: pre-wrap;
+}
+
+.output {
+  margin-top: 10px;
+  white-space: pre-wrap;
+  min-height: 20px;
+}
