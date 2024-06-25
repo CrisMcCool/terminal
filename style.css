@@ -42,11 +42,20 @@ body {
   min-height: 20px;
 }
 
-.icon {
-  width: 24px;
-  height: 24px;
+.icons {
+  display: flex;
+  align-items: center;
   margin-left: 10px;
-  cursor: pointer;
-  position: relative;
 }
 
+.icon {
+  width: 32px; /* Increase the size for better visibility */
+  height: 32px;
+  margin-left: 15px; /* Add more space between icons */
+  cursor: pointer;
+  transition: transform 0.2s; /* Add a smooth transition for hover effect */
+}
+
+.icon:hover {
+  transform: scale(1.2); /* Slightly enlarge the icon on hover */
+}
