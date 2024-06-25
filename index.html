@@ -1,8 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>terminal</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terminal</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="style.css" rel="stylesheet" type="text/css">
 </head>
@@ -12,8 +13,10 @@
       <span class="prompt">$</span>
       <div contenteditable="true" class="input" id="input" spellcheck="false"></div>
       <input type="file" id="file-upload" accept=".txt,.js,.html,.css,.json,.xml,.csv,.md,.java,.py,.rb,.php,.sh,.c,.cpp,.h,.cs,.go,.rs,.swift,.ts,.tsx,.jsx,.vue,.scss,.sass,.less,.ini,.yaml,.yml,.sql,.r,.pl,.pm,.lua,.kt,.dart,.scala" style="display: none;">
-      <img src="uploadicon.png" class="icon" id="upload-icon" alt="Upload">
-      <img src="downloadicon.png" class="icon" id="download-icon" alt="Download">
+      <div class="icons">
+        <img src="uploadicon.png" class="icon" id="upload-icon" alt="Upload">
+        <img src="downloadicon.png" class="icon" id="download-icon" alt="Download">
+      </div>
     </div>
     <div class="output" id="output"></div>
   </div>
