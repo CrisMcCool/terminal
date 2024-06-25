@@ -1,15 +1,48 @@
 const inputField = document.getElementById('input');
+const uploadIcon = document.getElementById('upload-icon');
+const downloadIcon = document.getElementById('download-icon');
+const fileUpload = document.getElementById('file-upload');
+const uploadTooltip = document.getElementById('upload-tooltip');
+const downloadTooltip = document.getElementById('download-tooltip');
 
+// Handle input changes for paired characters
 inputField.addEventListener('input', function(event) {
   const text = inputField.innerText;
   processInput(text);
 });
 
+// Handle tab key for indentation
 inputField.addEventListener('keydown', function(event) {
   if (event.key === 'Tab') {
     event.preventDefault();
     insertTab();
   }
+});
+
+// Upload file functionality
+uploadIcon.addEventListener('click', function() {
+  fileUpload.click();
+});
+
+fileUpload.addEventListener('change', function(event) {
+  const file = event.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      inputField.innerText = e.target.result;
+    };
+    reader.readAsText(file);
+  }
+});
+
+// Download file functionality
+downloadIcon.addEventListener('click', function() {
+  const text = inputField.innerText;
+  const blob = new Blob([text], { type: 'text/plain' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'output.txt'; // Default download file name
+  link.click();
 });
 
 function processInput(input) {
